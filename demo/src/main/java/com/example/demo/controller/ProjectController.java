@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/projects")
-@CrossOrigin(origins = "*") // Allow any origin for Render deployment
 public class ProjectController {
 
     private final ProjectService service;
