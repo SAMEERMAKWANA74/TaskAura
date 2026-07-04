@@ -14,8 +14,7 @@ export default function MyTask() {
       .then(data => setTasks(data))
       .catch(err => console.error(err));
   }, []);
-
-  const deleteTask = (id) => {
+const deleteTask = (id) => {
     fetch(`${API_BASE_URL}/api/tasks/${id}`, { method: "DELETE" })
       .then(() => setTasks(tasks.filter((t) => t.id !== id)))
       .catch(err => console.error(err));
@@ -37,6 +36,8 @@ export default function MyTask() {
     }
   };
 
+
+  
   return (
     <>
       <Header />
